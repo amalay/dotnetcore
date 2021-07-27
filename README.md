@@ -1,1 +1,1 @@
-# dotnetcore-samples
+# Dotnet Core Samples
