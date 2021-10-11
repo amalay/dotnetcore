@@ -11,6 +11,7 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
         public void GetVehicle()
         {
             //Produce Honda family products from Honda factory. Ex. Honda City, Honda Shine, Honda Activa
+            Console.WriteLine("");
             Console.WriteLine("Honda Family Products: ");
             Console.WriteLine("---------------------------------------------------------------------");
             IVehicleFactory hondaFactory = new HondaFactory();

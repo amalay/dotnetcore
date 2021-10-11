@@ -6,6 +6,9 @@ namespace Amalay.DesignPatterns
     {
         static void Main(string[] args)
         {
+            var furnitureClient = new AbstractFactory.Furniture.Client();
+            furnitureClient.GetFurniture();
+
             var vehicleClient = new AbstractFactory.Vehicle.Client();
             vehicleClient.GetVehicle();
 
