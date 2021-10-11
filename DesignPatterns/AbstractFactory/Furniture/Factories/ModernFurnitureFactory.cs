@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Amalay.DesignPatterns.AbstractFactory.Furniture
 {
-    class ClassicFactory : AbstractFurnitureFactory
+    class ModernFurnitureFactory : AbstractFurnitureFactory
     {
         public override AbstractChair CreateChair()
         {
-            return new ClassicChair();
+            return new ModernChair();
         }
 
         public override AbstractSofa CreateSofa()
         {
-            return new ClassicSofa();
+            return new ModernSofa();
         }
     }
 }

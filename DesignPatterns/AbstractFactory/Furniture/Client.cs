@@ -14,7 +14,7 @@ namespace Amalay.DesignPatterns.AbstractFactory.Furniture
             Console.WriteLine("");
             Console.WriteLine("Classic Family Products: ");
             Console.WriteLine("---------------------------------------------------------------------");
-            AbstractFurnitureFactory classicFactory = new ClassicFactory();
+            AbstractFurnitureFactory classicFactory = new ClassicFurnitureFactory();
             Console.WriteLine(classicFactory.CreateChair().Result());
             Console.WriteLine(classicFactory.CreateSofa().Result());
             Console.WriteLine(classicFactory.CreateSofa().Result(classicFactory.CreateChair()));
@@ -23,7 +23,7 @@ namespace Amalay.DesignPatterns.AbstractFactory.Furniture
             Console.WriteLine("");
             Console.WriteLine("Modern Family Products: ");
             Console.WriteLine("---------------------------------------------------------------------");
-            AbstractFurnitureFactory modernFactory = new ModernFactory();
+            AbstractFurnitureFactory modernFactory = new ModernFurnitureFactory();
             Console.WriteLine(modernFactory.CreateChair().Result());
             Console.WriteLine(modernFactory.CreateSofa().Result());            
             Console.WriteLine(modernFactory.CreateSofa().Result(modernFactory.CreateChair()));
