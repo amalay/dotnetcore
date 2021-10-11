@@ -1,1 +1,2 @@
-# Dotnet Core Samples
+# Design Patterns
+
