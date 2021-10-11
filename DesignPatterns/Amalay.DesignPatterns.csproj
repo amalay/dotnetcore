@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Factory\" />
     <Folder Include="Singleton\" />
   </ItemGroup>
 
