@@ -28,6 +28,6 @@ The client code has to work with both factories and products via their respectiv
 We can use either Interfaces or Abstract Classes or both to design our application.
 
 #### Sample Code
-- <a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/Amalay.DesignPatterns/AbstractFactory/Vehicle">Vehicle Example using Interfaces</a>
-- <a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/Amalay.DesignPatterns/AbstractFactory/Phone">Phone Example using Interfaces</a>
-- <a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/Amalay.DesignPatterns/AbstractFactory/Furniture">Furniture Example using Abstract Classes</a>
+- <a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/AbstractFactory/Vehicle">Vehicle Example using Interfaces</a>
+- <a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/AbstractFactory/Phone">Phone Example using Interfaces</a>
+- <a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/AbstractFactory/Furniture">Furniture Example using Abstract Classes</a>
