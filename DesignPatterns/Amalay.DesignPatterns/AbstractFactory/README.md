@@ -23,3 +23,7 @@ OR
 Maruti factory can only produce products related to Maruti family (e.g. Maruti Breza City Car, Maruti Gixxer Bike, Maruti Access 125 Scooter and so on).
 
 The client code has to work with both factories and products via their respective abstract interfaces. This lets you change the type of a factory that you pass to the client code, as well as the product variant that the client code receives, without breaking the actual client code.
+
+#### Sample Code
+<a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/Amalay.DesignPatterns/AbstractFactory/Vehicle">Vehicle Example</a>
+<a href="https://github.com/amalay/dotnetcore/tree/main/DesignPatterns/Amalay.DesignPatterns/AbstractFactory/Phone">Phone Example</a>
