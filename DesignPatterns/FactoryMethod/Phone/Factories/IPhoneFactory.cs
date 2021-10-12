@@ -8,6 +8,6 @@ namespace Amalay.DesignPatterns.FactoryMethod.Phone
 {
     public interface IPhoneFactory
     {
-        IPhone CreatePhone();
+        IPhone CreatePhone(string name, string brand);
     }
 }

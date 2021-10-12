@@ -10,19 +10,32 @@ namespace Amalay.DesignPatterns.FactoryMethod.Phone
     {
         public void GetPhone()
         {
-            //Produce Feature Phone from Feature Phone Factory.
-            Console.WriteLine("");
+            //Produce Feature Phone from Feature Phone Factory.            
             Console.WriteLine("Feature Phones: ");
-            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("----------------------------");
+
             IPhoneFactory featurePhoneFactory = new FeaturePhoneFactory();
-            Console.WriteLine(featurePhoneFactory.CreatePhone().Result());            
+            IPhone featurePhone = featurePhoneFactory.CreatePhone(PhoneName.Nokia3310, PhoneBrand.Nokia);
+
+            if (featurePhone != null)
+            {
+                Console.WriteLine($"{featurePhone.Name} {featurePhone.Type} by {featurePhone.Brand}");
+            }
 
             //Produce Smart Phone from Smart Phone Factory.
             Console.WriteLine("");
             Console.WriteLine("Smart Phones: ");
-            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("----------------------------");
+
             IPhoneFactory smartPhoneFactory = new SmartPhoneFactory();
-            Console.WriteLine(smartPhoneFactory.CreatePhone().Result());
+            IPhone smartPhone = smartPhoneFactory.CreatePhone(PhoneName.NokiaPixel, PhoneBrand.Nokia);
+            
+            if (smartPhone != null)
+            {
+                Console.WriteLine($"{smartPhone.Name} {smartPhone.Type} by {smartPhone.Brand}");
+            }
+
+            Console.WriteLine("");
         }
     }
 }

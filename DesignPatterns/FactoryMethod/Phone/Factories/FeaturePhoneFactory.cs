@@ -8,9 +8,9 @@ namespace Amalay.DesignPatterns.FactoryMethod.Phone
 {
     class FeaturePhoneFactory : IPhoneFactory
     {
-        public IPhone CreatePhone()
+        public IPhone CreatePhone(string name, string brand)
         {
-            return new FeaturePhone();
+            return new FeaturePhone(name, brand);
         }
     }
 }

@@ -8,9 +8,21 @@ namespace Amalay.DesignPatterns.FactoryMethod.Phone
 {
     class FeaturePhone : IPhone
     {
-        public string Result()
+        private readonly string _name;
+        private readonly string _type;
+        private readonly string _brand;
+
+        public FeaturePhone(string name, string brand)
         {
-            return "Feature Phone";
+            this._name = name;
+            this._type = PhoneType.FeaturePhone;
+            this._brand = brand;
         }
+
+        public string Name => this._name;
+
+        public string Type => this._type;
+
+        public string Brand => this._brand;
     }
 }
