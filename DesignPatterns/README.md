@@ -22,6 +22,8 @@ Chain of Responsibility Pattern, Observer Pattern, Iterator Pattern and so on ar
 ## Factory Pattern
 Creates objects without exposing the instantiation logic to the client.
 
+![image](https://user-images.githubusercontent.com/84455469/136981067-1f4c4293-62cb-4e43-a578-8b027e04d872.png)
+
 ```
 CardFactory factory = new CardFactory();
 
