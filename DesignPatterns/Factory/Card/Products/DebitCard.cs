@@ -9,10 +9,14 @@ namespace Amalay.DesignPatterns.Factory.Card
     class DebitCard : AbstractCard
     {
         private readonly string _name;
+        private readonly string _type;
+        private readonly string _brand;
 
-        public DebitCard(string name)
+        public DebitCard(string name, string brand)
         {
             this._name = name;
+            this._type = CardType.DebitCard;
+            this._brand = brand;
         }
 
         public override string Name
@@ -23,9 +27,20 @@ namespace Amalay.DesignPatterns.Factory.Card
             }
         }
 
-        public override string Result()
+        public override string Type
         {
-            return $"{this.Name} Debit Card";
+            get
+            {
+                return this._type;
+            }
+        }
+
+        public override string Brand
+        {
+            get
+            {
+                return this._brand;
+            }
         }
     }
 }

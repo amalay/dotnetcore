@@ -8,6 +8,10 @@ namespace Amalay.DesignPatterns.Factory.Phone
 {
     public interface IPhone
     {
-        string Result();
+        public string Name { get; }
+
+        public string Type { get; }
+
+        public string Brand { get; }
     }
 }

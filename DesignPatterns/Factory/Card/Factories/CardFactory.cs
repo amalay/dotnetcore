@@ -8,22 +8,15 @@ namespace Amalay.DesignPatterns.Factory.Card
 {
     class CardFactory
     {
-        private readonly string _name;
-
-        public CardFactory(string name)
-        {
-            this._name = name;
-        }
-
-        public AbstractCard CreateCard(string type)
+        public AbstractCard CreateCard(string name, string brand, string type)
         {
             switch (type)
             {
-                case "DebitCard":
-                    return new DebitCard(this._name);
+                case CardType.DebitCard:
+                    return new DebitCard(name, brand);
 
-                case "CreditCard":
-                    return new CreditCard(this._name);
+                case CardType.CreditCard:
+                    return new CreditCard(name, brand);
 
                 default:
                     throw new NotSupportedException();
