@@ -8,14 +8,14 @@ namespace Amalay.DesignPatterns.AbstractFactory.Phone
 {
     class NokiaFactory : IPhoneFactory
     {
-        public IFeaturePhone CreateFeaturePhone()
+        public IPhone CreateFeaturePhone(string name)
         {
-            return new Nokia3310();
+            return new FeaturePhone(name, PhoneBrand.Nokia);
         }
 
-        public ISmartPhone CreateSmartPhone()
+        public IPhone CreateSmartPhone(string name)
         {
-            return new NokiaPixel();
+            return new SmartPhone(name, PhoneBrand.Nokia);
         }
     }
 }

@@ -40,8 +40,8 @@ namespace Amalay.DesignPatterns
             var cardClient3 = new AbstractFactory.Card.Client();
             cardClient3.GetCard();
 
-            //var phoneClient3 = new AbstractFactory.Phone.Client();
-            //phoneClient3.GetPhone();
+            var phoneClient3 = new AbstractFactory.Phone.Client();
+            phoneClient3.GetPhone();
 
             //var furnitureClient = new AbstractFactory.Furniture.Client();
             //furnitureClient.GetFurniture();

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Amalay.DesignPatterns.AbstractFactory.Phone
 {
-    public interface IPhoneFactory
+    public interface IPhone
     {
-        IPhone CreateFeaturePhone(string name);
+        public string Name { get; }
 
-        IPhone CreateSmartPhone(string name);
-    }    
+        public string Type { get; }
+
+        public string Brand { get; }
+    }
 }
