@@ -8,19 +8,14 @@ namespace Amalay.DesignPatterns.Factory.Phone
 {
     class PhoneFactory
     {
-        public IPhone CreatePhone(string type)
+        public IPhone CreateFeaturePhone()
         {
-            switch (type)
-            {
-                case "FeaturePhone":
-                    return new FeaturePhone();
+            return new FeaturePhone();
+        }
 
-                case "SmartPhone":
-                    return new SmartPhone();
-
-                default:
-                    throw new NotSupportedException();
-            }
+        public IPhone CreateSmartPhone()
+        {
+            return new SmartPhone();
         }
     }
 }

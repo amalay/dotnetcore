@@ -15,8 +15,8 @@ namespace Amalay.DesignPatterns.Factory.Phone
             Console.WriteLine("Phones: ");
             Console.WriteLine("---------------------------------------------------------------------");
             var factory = new PhoneFactory();
-            Console.WriteLine(factory.CreatePhone("FeaturePhone").Result());
-            Console.WriteLine(factory.CreatePhone("SmartPhone").Result());
+            Console.WriteLine(factory.CreateFeaturePhone().Result());
+            Console.WriteLine(factory.CreateSmartPhone().Result());
         }
     }
 }

@@ -14,9 +14,9 @@ namespace Amalay.DesignPatterns.Factory.Card
             Console.WriteLine("");
             Console.WriteLine("Cards: ");
             Console.WriteLine("---------------------------------------------------------------------");
-            var debitCardFactory = new CardFactory("Visa");
-            Console.WriteLine(debitCardFactory.CreateCard("DebitCard").Result());
-            Console.WriteLine(debitCardFactory.CreateCard("CreditCard").Result());            
+            var factory = new CardFactory("Visa");
+            Console.WriteLine(factory.CreateCard("DebitCard").Result());
+            Console.WriteLine(factory.CreateCard("CreditCard").Result());            
         }
     }
 }
