@@ -40,7 +40,7 @@ Define an interface for creating an object, but let subclasses decide which clas
 AbstractCardFactory debitCardFactory = new DebitCardFactory("Visa");
 debitCardFactory.CreateCard().Result();
 
-AbstractCardFactory creditCardFactory = new CreditCardFactory("Master");
+AbstractCardFactory creditCardFactory = new CreditCardFactory("Visa");
 creditCardFactory.CreateCard().Result();
 ```
 OR
