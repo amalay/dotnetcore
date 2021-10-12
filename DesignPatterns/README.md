@@ -23,7 +23,7 @@ Chain of Responsibility Pattern, Observer Pattern, Iterator Pattern and so on ar
 Creates objects without exposing the instantiation logic to the client.
 
 ```
-var factory = new CardFactory("Visa");
+var factory = new CardFactory();
 factory.CreateCard("DebitCard").Result();
 factory.CreateCard("CreditCard").Result();
 ```
