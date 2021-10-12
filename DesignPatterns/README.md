@@ -46,6 +46,9 @@ var samsungSmartPhone = factory.CreateSmartPhone(PhoneName.SamsungGalaxy, PhoneB
 
 ## Factory Method Pattern
 Define an interface for creating an object, but let subclasses decide which class to instantiate.
+
+![image](https://user-images.githubusercontent.com/84455469/136982315-a4e65b63-e22b-4c75-8c42-33434559ae14.png)
+
 ```
 AbstractCardFactory debitCardFactory = new DebitCardFactory();
 AbstractCard visaDebitCard = debitCardFactory.CreateCard(CardName.Gold, CardBrand.Visa);
