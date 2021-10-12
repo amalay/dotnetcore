@@ -66,6 +66,9 @@ IPhone smartPhone = smartPhoneFactory.CreatePhone(PhoneName.NokiaPixel, PhoneBra
 ```
 ## Abstract Factory Pattern
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+![image](https://user-images.githubusercontent.com/84455469/136985276-68dfe76f-39e9-4037-a2e7-32b8916b1eb9.png)
+
 ```
 AbstractCardFactory visaCardFactory = new VisaCardFactory();
 AbstractCard visaDebitCard = visaCardFactory.CreateDebitCard(CardName.Gold);
