@@ -24,6 +24,9 @@ Maruti factory can only produce products related to Maruti family (e.g. Maruti B
 
 The client code has to work with both factories and products via their respective abstract interfaces. This lets you change the type of a factory that you pass to the client code, as well as the product variant that the client code receives, without breaking the actual client code.
 
+### Diagram
+![image](https://user-images.githubusercontent.com/84455469/136985620-c7d4fc93-fa91-498c-abb5-b5ac0480eb48.png)
+
 ### Note
 We can use either Interfaces or Abstract Classes or both to design our application.
 
