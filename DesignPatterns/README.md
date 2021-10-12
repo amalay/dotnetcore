@@ -36,6 +36,20 @@ factory.CreateSmartPhone().Result();
 
 ## Factory Method Pattern
 Define an interface for creating an object, but let subclasses decide which class to instantiate.
+```
+AbstractCardFactory debitCardFactory = new DebitCardFactory("Visa");
+debitCardFactory.CreateCard().Result();
 
+AbstractCardFactory creditCardFactory = new CreditCardFactory("Master");
+creditCardFactory.CreateCard().Result();
+```
+OR
+```
+IPhoneFactory featurePhoneFactory = new FeaturePhoneFactory();
+featurePhoneFactory.CreatePhone().Result();          
+
+IPhoneFactory smartPhoneFactory = new SmartPhoneFactory();
+smartPhoneFactory.CreatePhone().Result();
+```
 ## Abstract Factory Pattern
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
