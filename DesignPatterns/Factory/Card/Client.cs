@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amalay.DesignPatterns.Factory.Phone
+namespace Amalay.DesignPatterns.Factory.Card
 {
     class Client
     {
-        public void GetPhone()
+        public void GetCard()
         {
             //Produce Card from Card Factory.
             Console.WriteLine("");
-            Console.WriteLine("Phones: ");
+            Console.WriteLine("Cards: ");
             Console.WriteLine("---------------------------------------------------------------------");
-            var factory = new PhoneFactory();
-            Console.WriteLine(factory.CreatePhone("FeaturePhone").Result());
-            Console.WriteLine(factory.CreatePhone("SmartPhone").Result());
+            var debitCardFactory = new CardFactory("Visa");
+            Console.WriteLine(debitCardFactory.CreateCard("DebitCard").Result());
+            Console.WriteLine(debitCardFactory.CreateCard("CreditCard").Result());            
         }
     }
 }

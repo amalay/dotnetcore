@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amalay.DesignPatterns.Factory.Phone
+namespace Amalay.DesignPatterns.AbstractFactory.Card
 {
-    public interface IPhoneFactory
+    interface ICardFactory
     {
-        IPhone CreatePhone();
+
     }
 }

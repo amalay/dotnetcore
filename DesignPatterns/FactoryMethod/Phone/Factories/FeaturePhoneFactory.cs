@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amalay.DesignPatterns.Factory.Phone
+namespace Amalay.DesignPatterns.FactoryMethod.Phone
 {
-    class SmartPhoneFactory : IPhoneFactory
+    class FeaturePhoneFactory : IPhoneFactory
     {
         public IPhone CreatePhone()
         {
-            return new SmartPhone();
+            return new FeaturePhone();
         }
     }
 }
