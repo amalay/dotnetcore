@@ -53,3 +53,15 @@ smartPhoneFactory.CreatePhone().Result();
 ```
 ## Abstract Factory Pattern
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+```
+```
+OR
+```
+IPhoneFactory nokiaFactory = new NokiaFactory();
+nokiaFactory.CreateFeaturePhone().Result();
+nokiaFactory.CreateSmartPhone().Result();
+
+IPhoneFactory samsungFactory = new SamsungFactory();
+samsungFactory.CreateFeaturePhone().Result();
+samsungFactory.CreateSmartPhone().Result();
+```
