@@ -20,7 +20,22 @@ Chain of Responsibility Pattern, Observer Pattern, Iterator Pattern and so on ar
 
 
 ## Factory Pattern
+Creates objects without exposing the instantiation logic to the client.
+
+```
+var factory = new CardFactory("Visa");
+factory.CreateCard("DebitCard").Result();
+factory.CreateCard("CreditCard").Result();
+```
+OR
+```
+var factory = new PhoneFactory();
+factory.CreateFeaturePhone().Result();
+factory.CreateSmartPhone().Result();
+```
 
 ## Factory Method Pattern
+Define an interface for creating an object, but let subclasses decide which class to instantiate.
 
 ## Abstract Factory Pattern
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
