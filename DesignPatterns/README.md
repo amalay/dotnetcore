@@ -46,30 +46,37 @@ var samsungSmartPhone = factory.CreateSmartPhone(PhoneName.SamsungGalaxy, PhoneB
 Define an interface for creating an object, but let subclasses decide which class to instantiate.
 ```
 AbstractCardFactory debitCardFactory = new DebitCardFactory();
-debitCardFactory.CreateCard().Result();
+AbstractCard visaDebitCard = debitCardFactory.CreateCard(CardName.Gold, CardBrand.Visa);
 
 AbstractCardFactory creditCardFactory = new CreditCardFactory();
-creditCardFactory.CreateCard().Result();
+AbstractCard visaCreditCard = creditCardFactory.CreateCard(CardName.Platinum, CardBrand.Visa);
 ```
 OR
 ```
 IPhoneFactory featurePhoneFactory = new FeaturePhoneFactory();
-featurePhoneFactory.CreatePhone().Result();          
+IPhone featurePhone = featurePhoneFactory.CreatePhone(PhoneName.Nokia3310, PhoneBrand.Nokia);
 
 IPhoneFactory smartPhoneFactory = new SmartPhoneFactory();
-smartPhoneFactory.CreatePhone().Result();
+IPhone smartPhone = smartPhoneFactory.CreatePhone(PhoneName.NokiaPixel, PhoneBrand.Nokia);
 ```
 ## Abstract Factory Pattern
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 ```
+AbstractCardFactory visaCardFactory = new VisaCardFactory();
+AbstractCard visaDebitCard = visaCardFactory.CreateDebitCard(CardName.Gold);
+AbstractCard visaCreditCard = visaCardFactory.CreateCreditCard(CardName.Gold);
+
+AbstractCardFactory masterCardFactory = new MasterCardFactory();
+AbstractCard masterDebitCard = masterCardFactory.CreateDebitCard(CardName.Platinum);
+AbstractCard masterCreditCard = masterCardFactory.CreateCreditCard(CardName.Platinum);
 ```
 OR
 ```
-IPhoneFactory nokiaFactory = new NokiaFactory();
-nokiaFactory.CreateFeaturePhone().Result();
-nokiaFactory.CreateSmartPhone().Result();
+IPhoneFactory nokiaPhoneFactory = new NokiaFactory();
+IPhone nokiaFeaturePhone = nokiaPhoneFactory.CreateFeaturePhone(PhoneName.Nokia3310);
+IPhone nokiaSmartPhone = nokiaPhoneFactory.CreateSmartPhone(PhoneName.NokiaPixel);
 
-IPhoneFactory samsungFactory = new SamsungFactory();
-samsungFactory.CreateFeaturePhone().Result();
-samsungFactory.CreateSmartPhone().Result();
+IPhoneFactory samsungPhoneFactory = new SamsungFactory();
+IPhone samsungFeaturePhone = samsungPhoneFactory.CreateFeaturePhone(PhoneName.SamsungGuru);
+IPhone samsungSmartPhone = samsungPhoneFactory.CreateSmartPhone(PhoneName.SamsungGalaxy);
 ```
