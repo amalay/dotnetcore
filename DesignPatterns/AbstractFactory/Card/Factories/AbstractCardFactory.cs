@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Amalay.DesignPatterns.AbstractFactory.Card
 {
-    interface ICardFactory
+    abstract class AbstractCardFactory
     {
+        public abstract AbstractCard CreateCreditCard(string name);
 
+        public abstract AbstractCard CreateDebitCard(string name);
     }
 }

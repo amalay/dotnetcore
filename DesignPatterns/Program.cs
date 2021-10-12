@@ -34,6 +34,12 @@ namespace Amalay.DesignPatterns
 
             #region "Abstract Factory Pattern"
 
+            Console.WriteLine("Abstract Factory Pattern");
+            Console.WriteLine("===================================================================");
+
+            var cardClient3 = new AbstractFactory.Card.Client();
+            cardClient3.GetCard();
+
             //var phoneClient3 = new AbstractFactory.Phone.Client();
             //phoneClient3.GetPhone();
 

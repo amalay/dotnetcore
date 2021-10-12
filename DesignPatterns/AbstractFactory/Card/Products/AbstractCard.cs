@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Amalay.DesignPatterns.AbstractFactory.Card
 {
-    interface ICard
+    abstract class AbstractCard
     {
+        public abstract string Name { get; }
 
+        public abstract string Type { get; }
+
+        public abstract string Brand { get; }
     }
 }
