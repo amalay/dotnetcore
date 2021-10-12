@@ -8,6 +8,6 @@ namespace Amalay.DesignPatterns.FactoryMethod.Card
 {
     abstract class AbstractCardFactory
     {
-        public abstract AbstractCard CreateCard();
+        public abstract AbstractCard CreateCard(string name, string brand);
     }
 }

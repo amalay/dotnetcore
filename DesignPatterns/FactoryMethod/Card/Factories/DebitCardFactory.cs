@@ -8,16 +8,9 @@ namespace Amalay.DesignPatterns.FactoryMethod.Card
 {
     class DebitCardFactory : AbstractCardFactory
     {
-        private readonly string _name;
-
-        public DebitCardFactory(string name)
+        public override AbstractCard CreateCard(string name, string brand)
         {
-            this._name = name;
-        }
-
-        public override AbstractCard CreateCard()
-        {
-            return new DebitCard(this._name);
+            return new DebitCard(name, brand);
         }
     }
 }

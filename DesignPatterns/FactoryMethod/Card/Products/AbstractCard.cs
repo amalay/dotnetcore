@@ -10,6 +10,8 @@ namespace Amalay.DesignPatterns.FactoryMethod.Card
     {
         public abstract string Name { get; }
 
-        public abstract string Result();
+        public abstract string Type { get; }
+
+        public abstract string Brand { get; }
     }
 }

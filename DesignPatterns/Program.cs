@@ -7,12 +7,13 @@ namespace Amalay.DesignPatterns
         static void Main(string[] args)
         {
             #region "Factory Pattern"
+
             Console.WriteLine("Factory Pattern");
             Console.WriteLine("===================================================================");
+            
             var cardClient1 = new Factory.Card.Client();
             cardClient1.GetCard();
-
-            Console.WriteLine("");
+                        
             var phoneClient1 = new Factory.Phone.Client();
             phoneClient1.GetPhone();
 
@@ -20,11 +21,14 @@ namespace Amalay.DesignPatterns
 
             #region "Factory Method Pattern"
 
-            //var cardClient2 = new FactoryMethod.Card.Client();
-            //cardClient2.GetCard();
+            Console.WriteLine("Factory Method Pattern");
+            Console.WriteLine("===================================================================");
 
-            //var phoneClient2 = new FactoryMethod.Phone.Client();
-            //phoneClient2.GetPhone();
+            var cardClient2 = new FactoryMethod.Card.Client();
+            cardClient2.GetCard();
+            
+            var phoneClient2 = new FactoryMethod.Phone.Client();
+            phoneClient2.GetPhone();
 
             #endregion
 

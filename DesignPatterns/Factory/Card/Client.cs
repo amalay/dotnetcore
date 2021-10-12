@@ -13,9 +13,10 @@ namespace Amalay.DesignPatterns.Factory.Card
             //Produce Cards from Card Factory.            
             Console.WriteLine("Visa Cards: ");
             Console.WriteLine("----------------------------");
-            var factory = new CardFactory();
-            var visaDebitCard = factory.CreateCard(CardName.Platinum, CardBrand.Visa, CardType.DebitCard);
-            var visaCreditCard = factory.CreateCard(CardName.Platinum, CardBrand.Visa, CardType.CreditCard);
+
+            CardFactory factory = new CardFactory();
+            AbstractCard visaDebitCard = factory.CreateCard(CardName.Platinum, CardBrand.Visa, CardType.DebitCard);
+            AbstractCard visaCreditCard = factory.CreateCard(CardName.Platinum, CardBrand.Visa, CardType.CreditCard);
 
             if (visaDebitCard != null)
             {
@@ -29,9 +30,10 @@ namespace Amalay.DesignPatterns.Factory.Card
 
             Console.WriteLine("");
             Console.WriteLine("Master Cards: ");
-            Console.WriteLine("----------------------------");            
-            var masterDebitCard = factory.CreateCard(CardName.Platinum, CardBrand.Master, CardType.DebitCard);
-            var masterCreditCard = factory.CreateCard(CardName.Platinum, CardBrand.Master, CardType.CreditCard);
+            Console.WriteLine("----------------------------");
+
+            AbstractCard masterDebitCard = factory.CreateCard(CardName.Platinum, CardBrand.Master, CardType.DebitCard);
+            AbstractCard masterCreditCard = factory.CreateCard(CardName.Platinum, CardBrand.Master, CardType.CreditCard);
 
             if (masterDebitCard != null)
             {
@@ -42,6 +44,8 @@ namespace Amalay.DesignPatterns.Factory.Card
             {
                 Console.WriteLine($"{masterCreditCard.Name} {masterCreditCard.Type} by {masterCreditCard.Brand}");
             }
+
+            Console.WriteLine("");
         }
     }
 }

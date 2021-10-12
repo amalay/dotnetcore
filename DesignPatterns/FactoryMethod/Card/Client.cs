@@ -10,19 +10,32 @@ namespace Amalay.DesignPatterns.FactoryMethod.Card
     {
         public void GetCard()
         {
-            //Produce Feature Phone from Feature Phone Factory.
-            Console.WriteLine("");
+            //Produce Debit Cards from Debit Card Factory.            
             Console.WriteLine("Debit Cards: ");
-            Console.WriteLine("---------------------------------------------------------------------");
-            AbstractCardFactory debitCardFactory = new DebitCardFactory("Visa");
-            Console.WriteLine(debitCardFactory.CreateCard().Result());
+            Console.WriteLine("----------------------------");   
+            
+            AbstractCardFactory debitCardFactory = new DebitCardFactory();
+            AbstractCard visaDebitCard = debitCardFactory.CreateCard(CardName.Gold, CardBrand.Visa);
 
-            //Produce Smart Phone from Smart Phone Factory.
+            if (visaDebitCard != null)
+            {
+                Console.WriteLine($"{visaDebitCard.Name} {visaDebitCard.Type} by {visaDebitCard.Brand}");
+            }
+
+            //Produce Credit Cards from Credit Card Factory.
             Console.WriteLine("");
             Console.WriteLine("Credit Cards: ");
-            Console.WriteLine("---------------------------------------------------------------------");
-            AbstractCardFactory creditCardFactory = new CreditCardFactory("Master");
-            Console.WriteLine(creditCardFactory.CreateCard().Result());
+            Console.WriteLine("----------------------------");
+
+            AbstractCardFactory creditCardFactory = new CreditCardFactory();
+            AbstractCard visaCreditCard = creditCardFactory.CreateCard(CardName.Platinum, CardBrand.Visa);
+
+            if (visaCreditCard != null)
+            {
+                Console.WriteLine($"{visaCreditCard.Name} {visaCreditCard.Type} by {visaCreditCard.Brand}");
+            }
+
+            Console.WriteLine("");
         }
     }
 }

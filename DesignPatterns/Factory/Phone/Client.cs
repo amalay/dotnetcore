@@ -13,6 +13,7 @@ namespace Amalay.DesignPatterns.Factory.Phone
             //Produce Phones from Phone Factory.            
             Console.WriteLine("Nokia Phones: ");
             Console.WriteLine("----------------------------");
+
             var factory = new PhoneFactory();
             var nokiaFeaturePhone = factory.CreateFeaturePhone(PhoneName.Nokia3310, PhoneBrand.Nokia);
             var nokiaSmartPhone = factory.CreateSmartPhone(PhoneName.NokiaPixel, PhoneBrand.Nokia);
@@ -29,7 +30,8 @@ namespace Amalay.DesignPatterns.Factory.Phone
 
             Console.WriteLine("");
             Console.WriteLine("Samsung Phones: ");
-            Console.WriteLine("----------------------------");            
+            Console.WriteLine("----------------------------");    
+            
             var samsungFeaturePhone = factory.CreateFeaturePhone(PhoneName.SamsungGuru, PhoneBrand.Samsung);
             var samsungSmartPhone = factory.CreateSmartPhone(PhoneName.SamsungGalaxy, PhoneBrand.Samsung);
 
@@ -42,6 +44,8 @@ namespace Amalay.DesignPatterns.Factory.Phone
             {
                 Console.WriteLine($"{samsungSmartPhone.Name} {samsungSmartPhone.Type} by {samsungSmartPhone.Brand}");
             }
+
+            Console.WriteLine("");
         }
     }
 }
