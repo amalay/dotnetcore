@@ -1,1 +1,1 @@
-# Dotnet Core Samples
+# Factory Design Pattern
