@@ -37,10 +37,10 @@ factory.CreateSmartPhone().Result();
 ## Factory Method Pattern
 Define an interface for creating an object, but let subclasses decide which class to instantiate.
 ```
-AbstractCardFactory debitCardFactory = new DebitCardFactory("Visa");
+AbstractCardFactory debitCardFactory = new DebitCardFactory();
 debitCardFactory.CreateCard().Result();
 
-AbstractCardFactory creditCardFactory = new CreditCardFactory("Visa");
+AbstractCardFactory creditCardFactory = new CreditCardFactory();
 creditCardFactory.CreateCard().Result();
 ```
 OR
