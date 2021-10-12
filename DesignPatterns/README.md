@@ -23,15 +23,23 @@ Chain of Responsibility Pattern, Observer Pattern, Iterator Pattern and so on ar
 Creates objects without exposing the instantiation logic to the client.
 
 ```
-var factory = new CardFactory();
-factory.CreateCard("DebitCard").Result();
-factory.CreateCard("CreditCard").Result();
+CardFactory factory = new CardFactory();
+
+AbstractCard visaDebitCard = factory.CreateCard(CardName.Platinum, CardBrand.Visa, CardType.DebitCard);
+AbstractCard visaCreditCard = factory.CreateCard(CardName.Platinum, CardBrand.Visa, CardType.CreditCard);
+
+AbstractCard masterDebitCard = factory.CreateCard(CardName.Platinum, CardBrand.Master, CardType.DebitCard);
+AbstractCard masterCreditCard = factory.CreateCard(CardName.Platinum, CardBrand.Master, CardType.CreditCard);
 ```
 OR
 ```
 var factory = new PhoneFactory();
-factory.CreateFeaturePhone().Result();
-factory.CreateSmartPhone().Result();
+
+var nokiaFeaturePhone = factory.CreateFeaturePhone(PhoneName.Nokia3310, PhoneBrand.Nokia);
+var nokiaSmartPhone = factory.CreateSmartPhone(PhoneName.NokiaPixel, PhoneBrand.Nokia);
+
+var samsungFeaturePhone = factory.CreateFeaturePhone(PhoneName.SamsungGuru, PhoneBrand.Samsung);
+var samsungSmartPhone = factory.CreateSmartPhone(PhoneName.SamsungGalaxy, PhoneBrand.Samsung);
 ```
 
 ## Factory Method Pattern
