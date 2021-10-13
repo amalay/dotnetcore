@@ -23,4 +23,7 @@ User registration and Sending email are two distinct functionalities and there i
 
 ![image](https://user-images.githubusercontent.com/84455469/137103971-9c9abf30-f49a-4229-8bb5-761bcec70e00.png)
 
-
+### O: Open Closed Principle (OSP)
+A Class or Module should be open for extension but closed for modification.
+"<b>Open for extension</b>" means, we need to design our module/class in such a way that the new functionality can be added only when new requirements are generated. We can use inheritance for extension. 
+"<b>Closed for modification</b>" means we have already developed a class and it has gone through unit testing. We should then not alter it until we find bugs.
