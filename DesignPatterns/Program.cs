@@ -50,6 +50,15 @@ namespace Amalay.DesignPatterns
             //furnitureClient.GetFurniture();
 
             #endregion
+
+            #region "Singleton Pattern"
+
+            Console.WriteLine("Singleton Pattern");
+            Console.WriteLine("===================================================================");
+            var singletonClient = new Singleton.Client();
+            singletonClient.GetInstance();
+
+            #endregion
         }
     }
 }
