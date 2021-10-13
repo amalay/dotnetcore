@@ -22,4 +22,5 @@ It should not be like Swiss knife wherein if one of them need to change then ent
 User registration and Sending email are two distinct functionalities and there is no relation between them so there should be two seperate classes for both the functionality.
 | First  | Second |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| Content Celldg dfgfdg gfdfg d dfgdfg  dfg | Content Cell  |
+
