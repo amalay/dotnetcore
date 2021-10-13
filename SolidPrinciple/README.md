@@ -32,3 +32,5 @@ A Class or Module should be open for extension but closed for modification.<br/>
 
 ![image](https://user-images.githubusercontent.com/84455469/137136281-c9998e16-aaae-493f-bc96-8e94cd2afecb.png)
 
+### L: Liskov Substitution Principle (LSP)
+The Liskov Substitution Principle (LSP) is just an extension of the Open Closed Principle and ensure that a new class can be derived from a base class without changing their behavior. In another words, a derived class must be substitutable for its base class.
