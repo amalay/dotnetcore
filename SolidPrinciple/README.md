@@ -20,54 +20,6 @@ A Class or Module or Function should have only one job to do. In another words, 
 It should not be like Swiss knife wherein if one of them need to change then entire tool need to be altered. It does not mean that Class should only contain one method or property. There may be many members as long as they relate to single responsibility.
 ##### Example
 User registration and Sending email are two distinct functionalities and there is no relation between them so there should be two seperate classes for both the functionality.
-```
-public class UserRegistration
-    {
-        public virtual bool IsValidUserEntry(User user)
-        {
-            bool isvaild = false;
-            
-            if(!string.IsNullOrEmpty(user.Name) && !string.IsNullOrEmpty(user.Email) && !string.IsNullOrEmpty(user.Password))
-            {
-                isvaild = true;
-            }
 
-            return isvaild;
-        }
-
-        public virtual bool IsValidEmail(User user)
-        {
-            bool isvaild = false;
-
-            if (!string.IsNullOrEmpty(user.Email))
-            {
-                isvaild = true;
-            }
-
-            return isvaild;
-        }
-
-        public void RegisterUser(User user)
-        {
-            //Register user
-            if (IsValidUserEntry(user))
-            {                
-                UserService.Instance.RegisterUser(user);
-            }
-
-            //Send email
-            if (this.IsValidEmail(user))
-            {
-                this.SendEmail(new MailMessage("av@xyz.com", user.Email, "Registration", $"Welcome {user.Name}! Thanks for your registration with us."));
-            }
-        }        
-
-        public void SendEmail(MailMessage mailMessage)
-        {
-            SmtpClient smtpClient = new SmtpClient();
-                        
-            smtpClient.Send(mailMessage);
-        }
-    }
-```
+![image](https://user-images.githubusercontent.com/84455469/137103340-02eeb6ad-4413-43fe-b960-01f102123b29.png)
 
