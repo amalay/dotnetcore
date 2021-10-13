@@ -8,19 +8,21 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
 {
     class HondaFactory : IVehicleFactory
     {
-        public ICar CreateCar()
+        private string brand = VehicleBrand.Honda;
+
+        public ICar CreateCar(string name)
         {
-            return new HondaCity();
+            return new Car(name, brand);
         }
 
-        public IBike CreateBike()
+        public IBike CreateBike(string name)
         {
-            return new HondaShine();
+            return new Bike(name, brand);
         }        
 
-        public IScooter CreateScooter()
+        public IScooter CreateScooter(string name)
         {
-            return new HondaActiva();
+            return new Scooter(name, brand);
         }
     }
 }

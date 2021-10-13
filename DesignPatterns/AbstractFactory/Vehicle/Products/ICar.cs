@@ -8,6 +8,10 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
 {
     public interface ICar
     {
-        string Result();
+        public string Name { get; }
+
+        public string Type { get; }
+
+        public string Brand { get; }
     }
 }

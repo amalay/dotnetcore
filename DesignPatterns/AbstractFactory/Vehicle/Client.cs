@@ -10,23 +10,56 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
     {
         public void GetVehicle()
         {
-            //Produce Honda family products from Honda factory. Ex. Honda City, Honda Shine, Honda Activa
-            Console.WriteLine("");
+            //Produce Honda family products from Honda Vehicle Factory.            
             Console.WriteLine("Honda Family Products: ");
-            Console.WriteLine("---------------------------------------------------------------------");
-            IVehicleFactory hondaFactory = new HondaFactory();
-            Console.WriteLine(hondaFactory.CreateCar().Result());
-            Console.WriteLine(hondaFactory.CreateBike().Result());
-            Console.WriteLine(hondaFactory.CreateScooter().Result());
+            Console.WriteLine("----------------------------");
 
-            //Produce Maruti family products from Maruti factory. Ex. Maruti Breza, Mariti Gixxer, Maruti Access 125
+            IVehicleFactory hondaVehicleFactory = new HondaFactory();
+            ICar hondaCar = hondaVehicleFactory.CreateCar(VehicleName.HondaCity);
+            IBike hondaBike = hondaVehicleFactory.CreateBike(VehicleName.HondaShine);
+            IScooter hondaScooter = hondaVehicleFactory.CreateScooter(VehicleName.HondaActiva);
+
+            if (hondaCar != null)
+            {
+                Console.WriteLine($"{hondaCar.Name} {hondaCar.Type} by {hondaCar.Brand}");
+            }
+
+            if (hondaBike != null)
+            {
+                Console.WriteLine($"{hondaBike.Name} {hondaBike.Type} by {hondaBike.Brand}");
+            }
+
+            if (hondaScooter != null)
+            {
+                Console.WriteLine($"{hondaScooter.Name} {hondaScooter.Type} by {hondaScooter.Brand}");
+            }
+
+            //Produce Maruti Suzuki family products from Maruti Suzuki Vehicle Factory.            
             Console.WriteLine("");
-            Console.WriteLine("Maruti Family Products: ");
-            Console.WriteLine("---------------------------------------------------------------------");
-            IVehicleFactory marutiFactory = new MarutiFactory();
-            Console.WriteLine(marutiFactory.CreateCar().Result());
-            Console.WriteLine(marutiFactory.CreateBike().Result());
-            Console.WriteLine(marutiFactory.CreateScooter().Result());
+            Console.WriteLine("Maruti Suzuki Family Products: ");
+            Console.WriteLine("----------------------------");
+
+            IVehicleFactory marutiVehicleFactory = new MarutiFactory();
+            ICar marutiCar = marutiVehicleFactory.CreateCar(VehicleName.MarutiSuzukiBreza);
+            IBike marutiBike = marutiVehicleFactory.CreateBike(VehicleName.MarutiSuzukiGixxer);
+            IScooter marutiScooter = marutiVehicleFactory.CreateScooter(VehicleName.MarutiSuzukiAccess);
+
+            if (marutiCar != null)
+            {
+                Console.WriteLine($"{marutiCar.Name} {marutiCar.Type} by {marutiCar.Brand}");
+            }
+
+            if (marutiBike != null)
+            {
+                Console.WriteLine($"{marutiBike.Name} {marutiBike.Type} by {marutiBike.Brand}");
+            }
+
+            if (marutiScooter != null)
+            {
+                Console.WriteLine($"{marutiScooter.Name} {marutiScooter.Type} by {marutiScooter.Brand}");
+            }
+
+            Console.WriteLine("");
         }
     }
 }

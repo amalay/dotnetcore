@@ -8,10 +8,10 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
 {
     public interface IVehicleFactory
     {
-        ICar CreateCar();
+        ICar CreateCar(string name);
 
-        IBike CreateBike();
+        IBike CreateBike(string name);
 
-        IScooter CreateScooter();
+        IScooter CreateScooter(string name);
     }
 }

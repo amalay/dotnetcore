@@ -8,6 +8,10 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
 {
     public interface IBike
     {
-        string Result();
+        public string Name { get; }
+
+        public string Type { get; }
+
+        public string Brand { get; }
     }
 }

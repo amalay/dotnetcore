@@ -8,20 +8,22 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
 {
     class MarutiFactory : IVehicleFactory
     {
-        public ICar CreateCar()
+        private string brand = VehicleBrand.MarutiSuzuki;
+
+        public ICar CreateCar(string name)
         {
-            return new MarutiBreza();
+            return new Car(name, brand);
         }
 
-        public IBike CreateBike()
+        public IBike CreateBike(string name)
         {
-            return new MarutiGixxer();
+            return new Bike(name, brand);
         }
                 
 
-        public IScooter CreateScooter()
+        public IScooter CreateScooter(string name)
         {
-            return new MarutiAccess125();
+            return new Scooter(name, brand);
         }
     }
 }

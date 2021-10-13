@@ -51,4 +51,37 @@ namespace Amalay.DesignPatterns
         public const string SamsungGuru = "Samsung Guru";
         public const string SamsungGalaxy = "Samsung Galaxy";
     }
+
+    public struct VehicleType
+    {
+        public const string Car = "Car";
+        public const string Bike = "Bike";
+        public const string Scooter = "Scooter";
+        public const string Truck = "Truck";
+    }
+
+    public struct VehicleFuelType
+    {
+        public const string Diesel = "Diesel";
+        public const string Petrol = "Petrol";
+        public const string Electric = "Electric";
+        public const string Gas = "Gas";
+    }
+
+    public struct VehicleBrand
+    {
+        public const string Honda = "Honda";
+        public const string MarutiSuzuki = "Maruti Suzuki";
+    }
+
+    public struct VehicleName
+    {
+        public const string HondaCity = "Honda City";
+        public const string HondaShine = "Honda Shine";
+        public const string HondaActiva = "HondaActiva";
+
+        public const string MarutiSuzukiBreza = "Maruti Suzuki Breza";
+        public const string MarutiSuzukiGixxer = "Maruti Suzuki Gixxer";
+        public const string MarutiSuzukiAccess = "Maruti Suzuki Access 125";
+    }
 }
