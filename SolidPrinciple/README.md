@@ -21,7 +21,7 @@ It should not be like Swiss knife wherein if one of them need to change then ent
 ##### Example
 User registration and Sending email are two distinct functionalities and there is no relation between them so there should be two seperate classes for both the functionality.
 
-![image](https://user-images.githubusercontent.com/84455469/137103971-9c9abf30-f49a-4229-8bb5-761bcec70e00.png)
+![image](https://user-images.githubusercontent.com/84455469/137142137-7a2e2a4e-ec18-4b55-b283-02995f984a34.png)
 
 ### O: Open Closed Principle (OSP)
 A Class or Module should be open for extension but closed for modification.<br/>
