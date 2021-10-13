@@ -78,10 +78,10 @@ namespace Amalay.DesignPatterns
     {
         public const string HondaCity = "Honda City";
         public const string HondaShine = "Honda Shine";
-        public const string HondaActiva = "HondaActiva";
+        public const string HondaActiva = "Honda Activa";
 
         public const string MarutiSuzukiBreza = "Maruti Suzuki Breza";
         public const string MarutiSuzukiGixxer = "Maruti Suzuki Gixxer";
-        public const string MarutiSuzukiAccess = "Maruti Suzuki Access 125";
+        public const string MarutiSuzukiAccess125 = "Maruti Suzuki Access 125";
     }
 }

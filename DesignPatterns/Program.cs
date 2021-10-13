@@ -43,11 +43,11 @@ namespace Amalay.DesignPatterns
             var phoneClient3 = new AbstractFactory.Phone.Client();
             phoneClient3.GetPhone();
 
+            var vehicleClient3 = new AbstractFactory.Vehicle.Client();
+            vehicleClient3.GetVehicle();
+
             //var furnitureClient = new AbstractFactory.Furniture.Client();
             //furnitureClient.GetFurniture();
-
-            //var vehicleClient = new AbstractFactory.Vehicle.Client();
-            //vehicleClient.GetVehicle();            
 
             #endregion
         }

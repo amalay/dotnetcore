@@ -42,7 +42,7 @@ namespace Amalay.DesignPatterns.AbstractFactory.Vehicle
             IVehicleFactory marutiVehicleFactory = new MarutiFactory();
             ICar marutiCar = marutiVehicleFactory.CreateCar(VehicleName.MarutiSuzukiBreza);
             IBike marutiBike = marutiVehicleFactory.CreateBike(VehicleName.MarutiSuzukiGixxer);
-            IScooter marutiScooter = marutiVehicleFactory.CreateScooter(VehicleName.MarutiSuzukiAccess);
+            IScooter marutiScooter = marutiVehicleFactory.CreateScooter(VehicleName.MarutiSuzukiAccess125);
 
             if (marutiCar != null)
             {
