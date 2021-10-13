@@ -27,3 +27,8 @@ User registration and Sending email are two distinct functionalities and there i
 A Class or Module should be open for extension but closed for modification.<br/>
 "<b>Open for extension</b>" means, we need to design our module/class in such a way that the new functionality can be added only when new requirements are generated. We can use inheritance for extension.<br/>
 "<b>Closed for modification</b>" means we have already developed a class and it has gone through unit testing. We should then not alter it until we find bugs.
+
+##### Example
+
+![image](https://user-images.githubusercontent.com/84455469/137136281-c9998e16-aaae-493f-bc96-8e94cd2afecb.png)
+
