@@ -47,7 +47,7 @@ The Liskov Substitution Principle (LSP) is just an extension of the Open Closed 
 
 In example 1, we want to define a class with read and write operations in file. For this we have defined one File class and one FileManager class with required functionalities and it work well.<br/><br/>
 Now tomorrow if we want to restrict write operation based on some condition. Means if file is readonly then write operation should not be performed. 
-To achieve this we have extended the File class and create one ReadOnlyFile class as shown in example 2. But what is wrong here?? <br/>Firstly, In ReadOnlyFile class we are throwing exception into the SaveData method explicitly and secondly, we are modifying the FileManager class by adding some explicit condition into SaveDataIntoFile method. That means derived class is not a substitutable of it base class.<br/><br/>
+To achieve this we have extended the File class and create one ReadOnlyFile class as shown in example 2. <br/><br/>But what is wrong here?? <br/><br/>Firstly, In ReadOnlyFile class we are throwing exception into the SaveData method explicitly and secondly, we are modifying the FileManager class by adding some explicit condition into SaveDataIntoFile method. That means derived class is not a substitutable of it base class.<br/><br/>
 Now come to example 3, to implement Liskov Substitution Principle (LSP), we have restructured the program and spilt the File class into multiple classes based on the functionalities using interfaces. Here we can see that any of the derived class can easily substitute its base class. 
 
 ### I: Interface Segregation Principle (ISP)
