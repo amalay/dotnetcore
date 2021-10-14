@@ -39,4 +39,17 @@ The Liskov Substitution Principle (LSP) is just an extension of the Open Closed 
 
 ![image](https://user-images.githubusercontent.com/84455469/137278862-afb355ce-f10b-4820-8ebb-9c0c84a94fe4.png)
 
+### I: Interface Segregation Principle (ISP)
+Interface Segregation Principle (ISP) states that clients should not be forced to implement methods of the interfaces which they don't use. Instead of one fat interface should be splitted into many small interfaces with related methods so that calient can easily consume the interfarces without implementing unnecessary methods.
+
+##### Example
+![image](https://user-images.githubusercontent.com/84455469/137290401-2b046be0-6962-4e28-9208-e85cdc5bd718.png)
+
+### D: Depedency Inversion Principle (DIP)
+Dependency Inversion Principle (DIP) states that high-level modules/classes should not depend on low-level modules/classes. 
+Both higl-level and low-level module/classes should depend upon abstractions. And abstractions should not depend upon details rather Details should depend upon abstractions.
+
+High-level modules/classes implement business rules or logic in a system (application). Low-level modules/classes deal with more detailed operations; in other words they may deal with writing information to databases or passing messages to the operating system or services. So we must keep these high-level and low-level modules/classes loosely coupled as much as we can. To do that, we need to make both of them dependent on abstractions instead of knowing each other.
+
+##### Example
 
