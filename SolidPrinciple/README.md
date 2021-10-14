@@ -34,8 +34,8 @@ A Class or Module should be open for extension but closed for modification.<br/>
 
 ![image](https://user-images.githubusercontent.com/84455469/137136281-c9998e16-aaae-493f-bc96-8e94cd2afecb.png)
 
-In example 1, Calculator class is used to calculate the area of rectangle and it is perfect. 
-But lets say tomorrow if we want extend the Calculator class by adding one more method to calcuate area of circle then what will happen? Definetely example 2 is one of the solution and it will work well. But we can see that for every new method we have to modify the Calculator class with multiple if-else statements. That means it is not following Open Closed Principle (OSP).
+In example 1, Calculator class is used to calculate the area of rectangle and it is perfect. <br/>
+But lets say tomorrow if we want to extend the Calculator class by adding one more method to calcuate area of circle then what will happen? Definetely example 2 is one of the solution and it will work well. But we can see that for every new method we have to modify the Calculator class with multiple if-else statements. That means it is not following Open Closed Principle (OSP).<br/>
 Now see the example 3, we can add n-number of functionalities without modifing the Calculator class. We only need to do is, declare one class for each new functionality. Hence it is open for extension but closed for modification and thats what the Open Closed Principle (OSP) is.
 
 ### L: Liskov Substitution Principle (LSP)
@@ -45,9 +45,9 @@ The Liskov Substitution Principle (LSP) is just an extension of the Open Closed 
 
 ![image](https://user-images.githubusercontent.com/84455469/137278862-afb355ce-f10b-4820-8ebb-9c0c84a94fe4.png)
 
-In example 1, we want to define a class with read and write operations in file. For this we have defined one File class and one FileManager class with required functionalities and it work well.
-Now tomorrow we want to restrict write operation based on some condition. Means if file is readonly then write operation should not be performed. 
-To achieve this we have extended the File class and create one ReadOnlyFile class as shown in example 2. But what is wrong here?? Firstly, In ReadOnlyFile class we are throwing exception into the SaveData method explicitly and secondly, we are modifying the FileManager class by adding some explicit condition into SaveDataIntoFile method. That means derived class is not a substitutable of it base class.
+In example 1, we want to define a class with read and write operations in file. For this we have defined one File class and one FileManager class with required functionalities and it work well.<br/>
+Now tomorrow if we want to restrict write operation based on some condition. Means if file is readonly then write operation should not be performed. 
+To achieve this we have extended the File class and create one ReadOnlyFile class as shown in example 2. But what is wrong here?? <br/>Firstly, In ReadOnlyFile class we are throwing exception into the SaveData method explicitly and secondly, we are modifying the FileManager class by adding some explicit condition into SaveDataIntoFile method. That means derived class is not a substitutable of it base class.<br/>
 Now come to example 3, to implement Liskov Substitution Principle (LSP), we have restructured the program and spilt the File class into multiple classes based on the functionalities using interfaces. Here we can see that any of the derived class can easily substitute its base class. 
 
 ### I: Interface Segregation Principle (ISP)
