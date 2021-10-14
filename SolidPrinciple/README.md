@@ -23,6 +23,8 @@ User registration and Sending email are two distinct functionalities and there i
 
 ![image](https://user-images.githubusercontent.com/84455469/137142137-7a2e2a4e-ec18-4b55-b283-02995f984a34.png)
 
+In example 1 we can see that UserRegistration class is not following Single Responsibility Principle (SRP) because SendEmail and EmailValidation methods are totally different functionality so these method should belong to UserRegistration class. Hence it is seperated in example 2 to follow Single Responsibility Principle (SRP).
+
 ### O: Open Closed Principle (OSP)
 A Class or Module should be open for extension but closed for modification.<br/>
 "<b>Open for extension</b>" means, we need to design our module/class in such a way that the new functionality can be added only when new requirements are generated. We can use inheritance for extension.<br/>
@@ -32,12 +34,21 @@ A Class or Module should be open for extension but closed for modification.<br/>
 
 ![image](https://user-images.githubusercontent.com/84455469/137136281-c9998e16-aaae-493f-bc96-8e94cd2afecb.png)
 
+In example 1, Calculator class is used to calculate the area of rectangle and it is perfect. <br/><br/>
+But lets say tomorrow if we want to extend the Calculator class by adding one more method to calcuate area of circle then what will happen? Definetely example 2 is one of the solution and it will work well. But we can see that for every new method we have to modify the Calculator class with multiple if-else statements. That means it is not following Open Closed Principle (OSP).<br/><br/>
+Now see the example 3, we can add n-number of functionalities without modifing the Calculator class. We only need to do is, declare one class for each new functionality. Hence it is open for extension but closed for modification and thats what the Open Closed Principle (OSP) is.
+
 ### L: Liskov Substitution Principle (LSP)
 The Liskov Substitution Principle (LSP) is just an extension of the Open Closed Principle and ensure that a new class can be derived from a base class without changing their behavior. In another words, a derived class must be substitutable for its base class.
 
 ##### Example
 
 ![image](https://user-images.githubusercontent.com/84455469/137278862-afb355ce-f10b-4820-8ebb-9c0c84a94fe4.png)
+
+In example 1, we want to define a class with read and write operations in file. For this we have defined one File class and one FileManager class with required functionalities and it work well.<br/><br/>
+Now tomorrow if we want to restrict write operation based on some condition. Means if file is readonly then write operation should not be performed. 
+To achieve this we have extended the File class and create one ReadOnlyFile class as shown in example 2. <br/><br/>But what is wrong here?? <br/><br/>Firstly, In ReadOnlyFile class we are throwing exception into the SaveData method explicitly and secondly, we are modifying the FileManager class by adding some explicit condition into SaveDataIntoFile method. That means derived class is not a substitutable of it base class.<br/><br/>
+Now come to example 3, to implement Liskov Substitution Principle (LSP), we have restructured the program and spilt the File class into multiple classes based on the functionalities using interfaces. Here we can see that any of the derived class can easily substitute its base class. 
 
 ### I: Interface Segregation Principle (ISP)
 Interface Segregation Principle (ISP) states that clients should not be forced to implement methods of the interfaces which they don't use. Instead of one fat interface should be splitted into many small interfaces with related methods so that calient can easily consume the interfarces without implementing unnecessary methods.
@@ -52,4 +63,5 @@ Both higl-level and low-level module/classes should depend upon abstractions. An
 High-level modules/classes implement business rules or logic in a system (application). Low-level modules/classes deal with more detailed operations; in other words they may deal with writing information to databases or passing messages to the operating system or services. So we must keep these high-level and low-level modules/classes loosely coupled as much as we can. To do that, we need to make both of them dependent on abstractions instead of knowing each other.
 
 ##### Example
+![image](https://user-images.githubusercontent.com/84455469/137316213-65b84cf7-4833-4091-a017-0ed3c20652e3.png)
 
