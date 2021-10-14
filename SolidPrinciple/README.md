@@ -52,4 +52,5 @@ Both higl-level and low-level module/classes should depend upon abstractions. An
 High-level modules/classes implement business rules or logic in a system (application). Low-level modules/classes deal with more detailed operations; in other words they may deal with writing information to databases or passing messages to the operating system or services. So we must keep these high-level and low-level modules/classes loosely coupled as much as we can. To do that, we need to make both of them dependent on abstractions instead of knowing each other.
 
 ##### Example
+![image](https://user-images.githubusercontent.com/84455469/137316213-65b84cf7-4833-4091-a017-0ed3c20652e3.png)
 
