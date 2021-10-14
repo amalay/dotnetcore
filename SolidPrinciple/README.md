@@ -10,7 +10,7 @@ SOLID principle provide great help to overcome these design flaws.
 ## SOLID Principle Details
 
 - S: Single Responsibility Principle (SRP)
-- O: Open Closed Principle (OSP)
+- O: Open Closed Principle (OCP)
 - L: Liskov Substitution Principle (LSP)
 - I: Interface Segregation Principle (ISP)
 - D: Depedency Inversion Principle (DIP)
