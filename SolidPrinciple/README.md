@@ -25,7 +25,7 @@ User registration and Sending email are two distinct functionalities and there i
 
 In example 1 we can see that UserRegistration class is not following Single Responsibility Principle (SRP) because SendEmail and EmailValidation methods are totally different functionality so these method should belong to UserRegistration class. Hence it is seperated in example 2 to follow Single Responsibility Principle (SRP).
 
-### O: Open Closed Principle (OSP)
+### O: Open Closed Principle (OCP)
 A Class or Module should be open for extension but closed for modification.<br/>
 "<b>Open for extension</b>" means, we need to design our module/class in such a way that the new functionality can be added only when new requirements are generated. We can use inheritance for extension.<br/>
 "<b>Closed for modification</b>" means we have already developed a class and it has gone through unit testing. We should then not alter it until we find bugs.
@@ -35,8 +35,8 @@ A Class or Module should be open for extension but closed for modification.<br/>
 ![image](https://user-images.githubusercontent.com/84455469/137136281-c9998e16-aaae-493f-bc96-8e94cd2afecb.png)
 
 In example 1, Calculator class is used to calculate the area of rectangle and it is perfect. <br/><br/>
-But lets say tomorrow if we want to extend the Calculator class by adding one more method to calcuate area of circle then what will happen? Definetely example 2 is one of the solution and it will work well. But we can see that for every new method we have to modify the Calculator class with multiple if-else statements. That means it is not following Open Closed Principle (OSP).<br/><br/>
-Now see the example 3, we can add n-number of functionalities without modifing the Calculator class. We only need to do is, declare one class for each new functionality. Hence it is open for extension but closed for modification and thats what the Open Closed Principle (OSP) is.
+But lets say tomorrow if we want to extend the Calculator class by adding one more method to calcuate area of circle then what will happen? Definetely example 2 is one of the solution and it will work well. But we can see that for every new method we have to modify the Calculator class with multiple if-else statements. That means it is not following Open Closed Principle (OCP).<br/><br/>
+Now see the example 3, we can add n-number of functionalities without modifing the Calculator class. We only need to do is, declare one class for each new functionality. Hence it is open for extension but closed for modification and thats what the Open Closed Principle (OCP) is.
 
 ### L: Liskov Substitution Principle (LSP)
 The Liskov Substitution Principle (LSP) is just an extension of the Open Closed Principle and ensure that a new class can be derived from a base class without changing their behavior. In another words, a derived class must be substitutable for its base class.
