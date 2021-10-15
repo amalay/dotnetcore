@@ -68,3 +68,10 @@ High-level modules/classes implement business rules or logic in a system (applic
 ##### Example
 ![image](https://user-images.githubusercontent.com/84455469/137316213-65b84cf7-4833-4091-a017-0ed3c20652e3.png)
 
+In example 1, we can see that ExceptionLogger class is used to log the exception into file using "FileLogger" class and it is working perfectly.<br/><br/>
+Now tomorrow, we want to categorise our exception logging mechanism to log SQL exception into database while keeping the existing file logging as it. To achieve this, we have defined one more class as "DbLogger" and consuming that class inside ExceptionLogger class. Which is also good but you can see that for each new type of exception, we have to modify ExceptionLogger and that will impact whole system along with existing clients.<br/><br/>
+Now to mitigate this issue, we have to de-couple the structure in such a way that ExceptionLogger is not needed to modify at all. <br/><br/>
+In example 3, we have de-coupled the design using ILogger interface. Now you can see that both high-level and low-level classes are depending on abstraction (i.e. ILogger) instead of knowing each other. And thats what Depedency Inversion Principle (DIP) is.
+
+Even in future, if want to extend it further by adding one more type of exception (lets say EventLogger) then also there is no need to modify the "ExceptionLogger" logger class at all as shown in example 4. And we can keep extending without impacting the existing system.
+
