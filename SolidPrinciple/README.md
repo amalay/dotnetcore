@@ -54,7 +54,7 @@ Now come to example 3, to implement Liskov Substitution Principle (LSP), we have
 Interface Segregation Principle (ISP) states that clients should not be forced to implement methods of the interfaces which they don't use. Instead of one fat interface should be splitted into many small interfaces with related methods so that calient can easily consume the interfarces without implementing unnecessary methods.
 
 ##### Example
-![image](https://user-images.githubusercontent.com/84455469/137290401-2b046be0-6962-4e28-9208-e85cdc5bd718.png)
+![image](https://user-images.githubusercontent.com/84455469/137495730-cf3bae7a-4d72-40ab-b011-0dab8bd9c67f.png)
 
 ### D: Depedency Inversion Principle (DIP)
 Dependency Inversion Principle (DIP) states that high-level modules/classes should not depend on low-level modules/classes. 
