@@ -57,7 +57,6 @@ Interface Segregation Principle (ISP) states that clients should not be forced t
 ![image](https://user-images.githubusercontent.com/84455469/137495730-cf3bae7a-4d72-40ab-b011-0dab8bd9c67f.png)
 
 In example 1, we can see that ITask interface have three methods "CreateTask", "AssignTask" and "Development". All three methods are relavent for TeamLead class and has been implement by "TeamLead" class. But Development method of the ITask interface is not relavent for "Manager" class because generally manager don't do the development. But here we are forcing the "Manager" class to implement "Development" method also unnecessarily. To mitigate this issue Interface Segregation Principle (ISP) is need to be followed.<br/><br/>
-
 Now in example 2, we have splited fatty interface ITask into two small interfaces called ITask and IDevelopment with relavent methods. Now "Manager" class need to implement only ITask interface and "TeamLead" class can implement both ITask and IDevelopment interfaces. And thats what Interface Segregation Principle (ISP) is.
 
 ### D: Depedency Inversion Principle (DIP)
