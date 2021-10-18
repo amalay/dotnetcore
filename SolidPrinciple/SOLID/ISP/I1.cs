@@ -37,7 +37,7 @@ namespace Amalay.SolidPrinciple.I1
     {
         public void CreateTask()
         {
-            throw new NotImplementedException();
+            //Code to create a task
         }
 
         public void AssignTask()
@@ -47,7 +47,8 @@ namespace Amalay.SolidPrinciple.I1
 
         public void Development()
         {
-            throw new Exception("Manager can't work on Task");
+            var msg = "Manager can't develop!";
+            throw new Exception(msg);
         }
     }
 }
