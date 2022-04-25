@@ -23,7 +23,7 @@ User registration and Sending email are two distinct functionalities and there i
 
 ![image](https://user-images.githubusercontent.com/84455469/137142137-7a2e2a4e-ec18-4b55-b283-02995f984a34.png)
 
-In example 1 we can see that UserRegistration class is not following Single Responsibility Principle (SRP) because SendEmail and EmailValidation methods are totally different functionality so these method should belong to UserRegistration class. Hence it is seperated in example 2 to follow Single Responsibility Principle (SRP).
+In example 1 we can see that UserRegistration class is not following Single Responsibility Principle (SRP) because SendEmail and EmailValidation methods are totally different functionality so these method should not belong to UserRegistration class. Hence it is seperated in example 2 to follow Single Responsibility Principle (SRP).
 
 ### O: Open Closed Principle (OCP)
 A Class or Module should be open for extension but closed for modification.<br/>
